@@ -1,6 +1,6 @@
 # try-oras-on-ghcr
 
-This project demonstrates the process of uploading artifacts to the GitHub Container Registry using ORAS. Although the example provided uses a single text file as the artifact, the same process can be applied to upload a collection of files.
+This project shows how to use ORAS (OCI Registry as Storage) to upload artifacts, such as a single text file or a collection of files, to the GitHub Container Registry.
 
 Read:
 
