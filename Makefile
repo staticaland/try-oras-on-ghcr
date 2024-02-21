@@ -10,4 +10,4 @@ push:
 pull:
 	rm -f artifact.txt
 	oras pull "$(REPO)"
-	cat artifact.txt  # should print "hello world"
+	cat artifact.txt
