@@ -28,6 +28,15 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Extract metadata (tags, labels) from Git reference and GitHub events
+      id: m
+      uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5.5.1
+      with:
+        images: |
+          ghcr.io/${{ github.repository }}/hehe
+        tags: |
+          type=raw,value=lol
+
     - name: Display ORAS Version
       run: oras version
 
