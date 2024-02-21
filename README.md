@@ -1,5 +1,7 @@
 # try-oras-on-ghcr
 
+This project demonstrates the process of uploading artifacts to the GitHub Container Registry using ORAS. Although the example provided uses a single text file as the artifact, the same process can be applied to upload a collection of files.
+
 Read:
 
 - [ORAS docs - Pushing and Pulling](https://oras.land/docs/how_to_guides/pushing_and_pulling)
