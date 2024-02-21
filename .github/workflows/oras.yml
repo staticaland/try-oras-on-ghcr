@@ -32,4 +32,4 @@ jobs:
       run: oras version
 
     - name: Execute Makefile
-      run: make
+      run: make push
