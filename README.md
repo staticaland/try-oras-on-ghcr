@@ -5,8 +5,8 @@ This project shows how to use ORAS (OCI Registry as Storage) to upload artifacts
 Pull:
 
 ```sh
-oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/single:lol'
-oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/multiple:lol'
+oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/single:latest'
+oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/multiple:latest'
 ```
 
 Read:
