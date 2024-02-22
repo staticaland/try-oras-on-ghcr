@@ -1,4 +1,4 @@
-# try-oras-on-ghcr
+# How to use ORAS with GitHub Container Registry for artifact management
 
 This project shows how to use ORAS (OCI Registry as Storage) to upload artifacts, such as a single text file or a collection of files, to the GitHub Container Registry.
 
