@@ -34,6 +34,7 @@ jobs:
       with:
         images: |
           ghcr.io/${{ github.repository }}/single
+        sep-tags: ","
         tags: |
           type=raw,value=lol
 

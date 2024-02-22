@@ -1,6 +1,6 @@
-TAGS ?= latest,lol
-REPO_SINGLE ?= ghcr.io/staticaland/try-oras-on-ghcr/single:${TAGS}
-REPO_MULTIPLE ?= ghcr.io/staticaland/try-oras-on-ghcr/multiple:${TAGS}
+DOCKER_METADATA_OUTPUT_TAGS ?= latest,lol
+REPO_SINGLE ?= ghcr.io/staticaland/try-oras-on-ghcr/single:${DOCKER_METADATA_OUTPUT_TAGS}
+REPO_MULTIPLE ?= ghcr.io/staticaland/try-oras-on-ghcr/multiple:${DOCKER_METADATA_OUTPUT_TAGS}
 
 .PHONY: push pull
 
