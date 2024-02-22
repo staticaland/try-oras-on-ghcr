@@ -6,11 +6,11 @@ REPO_MULTIPLE=ghcr.io/staticaland/try-oras-on-ghcr/multiple:lol
 push:
 	oras push "$(REPO)" \
 	--artifact-type application/vnd.acme.rocket.config \
-  	artifact.txt:text/plain \
+  	artifact.txt:text/plain
 
 push-multiple:
 	oras push "$(REPO_MULTIPLE)" \
-	--artifact-type: application/vnd.kenmuse.mytool.config.v1 \
+	--artifact-type application/vnd.acme.rocket.config \
 	artifact.txt README.md
 
 pull:
