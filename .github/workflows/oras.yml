@@ -36,7 +36,6 @@ jobs:
         tags: |
           type=sha
           type=ref,event=branch
-          type=ref,event=workflow_dispatch
           type=raw,value=lol
           type=raw,value=giraffe
 
