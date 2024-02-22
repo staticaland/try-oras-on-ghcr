@@ -2,6 +2,13 @@
 
 This project shows how to use ORAS (OCI Registry as Storage) to upload artifacts, such as a single text file or a collection of files, to the GitHub Container Registry.
 
+Pull:
+
+```sh
+oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/single:lol'
+oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/multiple:lol'
+```
+
 Read:
 
 - [ORAS docs - Pushing and Pulling](https://oras.land/docs/how_to_guides/pushing_and_pulling)
