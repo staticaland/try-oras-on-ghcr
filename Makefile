@@ -10,7 +10,7 @@ push:
   	artifact.txt:text/plain
 
 push-multiple:
-	oras push "$(REPO_MULTIPLE)" \
+	oras push "$(REPO_MULTIPLE):$(DOCKER_METADATA_OUTPUT_TAGS)" \
 	--artifact-type application/vnd.acme.rocket.config \
 	artifact.txt README.md
 

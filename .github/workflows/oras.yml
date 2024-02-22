@@ -34,6 +34,9 @@ jobs:
       with:
         sep-tags: ","
         tags: |
+          type=sha
+          type=ref,event=branch
+          type=ref,event=workflow_dispatch
           type=raw,value=lol
           type=raw,value=giraffe
 
@@ -42,5 +45,7 @@ jobs:
         REPO_SINGLE: ghcr.io/${{ github.repository }}/single
       run: make push
 
-    # - name: Execute Makefile
-    #   run: make push-multiple
+    - name: Execute Makefile
+      env:
+        REPO_MULTIPLE: ghcr.io/${{ github.repository }}/multiple
+      run: make push-multiple
