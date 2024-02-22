@@ -42,3 +42,6 @@ jobs:
 
     - name: Execute Makefile
       run: make push
+
+    - name: Execute Makefile
+      run: make push-multiple
