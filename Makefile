@@ -1,11 +1,11 @@
 DOCKER_METADATA_OUTPUT_TAGS ?= latest,lol
-REPO_SINGLE ?= ghcr.io/staticaland/try-oras-on-ghcr/single:${DOCKER_METADATA_OUTPUT_TAGS}
-REPO_MULTIPLE ?= ghcr.io/staticaland/try-oras-on-ghcr/multiple:${DOCKER_METADATA_OUTPUT_TAGS}
+REPO_SINGLE ?= ghcr.io/staticaland/try-oras-on-ghcr/single
+REPO_MULTIPLE ?= ghcr.io/staticaland/try-oras-on-ghcr/multiple
 
 .PHONY: push pull
 
 push:
-	oras push "$(REPO_SINGLE)" \
+	oras push "$(REPO_SINGLE):$(DOCKER_METADATA_OUTPUT_TAGS)" \
 	--artifact-type application/vnd.acme.rocket.config \
   	artifact.txt:text/plain
 
