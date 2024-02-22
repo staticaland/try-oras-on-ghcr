@@ -9,6 +9,15 @@ oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/single:latest'
 oras pull 'ghcr.io/staticaland/try-oras-on-ghcr/multiple:latest'
 ```
 
+List doesn't work ([issue](https://github.com/oras-project/oras/issues/733), [discussion](https://github.com/orgs/community/discussions/26279)):
+
+```sh
+oras repo ls 'ghcr.io/staticaland/try-oras-on-ghcr'
+oras repo ls 'ghcr.io/staticaland/try-oras-on-ghcr/single'
+```
+
+Perhaps it worked before, with version 1 of the Docker Registry API?
+
 Read:
 
 - [ORAS docs - Pushing and Pulling](https://oras.land/docs/how_to_guides/pushing_and_pulling)
