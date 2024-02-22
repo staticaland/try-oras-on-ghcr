@@ -16,10 +16,10 @@ push-multiple:
 
 pull:
 	rm -f artifact.txt
-	oras pull "$(REPO_SINGLE)"
+	oras pull "$(REPO_SINGLE):latest"
 	cat artifact.txt
 
 pull-multiple:
 	rm -f artifact.txt README.md
-	oras pull "$(REPO_MULTIPLE)"
+	oras pull "$(REPO_MULTIPLE):latest"
 	cat artifact.txt README.md

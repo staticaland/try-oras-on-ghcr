@@ -38,6 +38,7 @@ jobs:
           type=ref,event=branch
           type=raw,value=lol
           type=raw,value=giraffe
+          type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
 
     - name: Execute Makefile
       env:
