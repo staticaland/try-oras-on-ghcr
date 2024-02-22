@@ -2,7 +2,7 @@ DOCKER_METADATA_OUTPUT_TAGS ?= dirty
 REPO_SINGLE ?= ghcr.io/staticaland/try-oras-on-ghcr/single
 REPO_MULTIPLE ?= ghcr.io/staticaland/try-oras-on-ghcr/multiple
 
-.PHONY: push pull
+.PHONY: push push-multiple pull pull-multiple
 
 push:
 	oras push "$(REPO_SINGLE):$(DOCKER_METADATA_OUTPUT_TAGS)" \
