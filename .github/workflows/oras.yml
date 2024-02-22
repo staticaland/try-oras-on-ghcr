@@ -40,8 +40,7 @@ jobs:
     - name: Execute Makefile
       env:
         REPO_SINGLE: ghcr.io/${{ github.repository }}/single
-        TAGS: ${{ steps.m.outputs.tags[0] }},cat
       run: make push
 
-    - name: Execute Makefile
-      run: make push-multiple
+    # - name: Execute Makefile
+    #   run: make push-multiple
