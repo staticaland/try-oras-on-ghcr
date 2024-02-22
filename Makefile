@@ -1,10 +1,11 @@
-REPO=ghcr.io/staticaland/try-oras-on-ghcr/single:lol
-REPO_MULTIPLE=ghcr.io/staticaland/try-oras-on-ghcr/multiple:lol
+TAGS ?= latest,lol
+REPO_SINGLE ?= ghcr.io/staticaland/try-oras-on-ghcr/single:${TAGS}
+REPO_MULTIPLE ?= ghcr.io/staticaland/try-oras-on-ghcr/multiple:${TAGS}
 
 .PHONY: push pull
 
 push:
-	oras push "$(REPO)" \
+	oras push "$(REPO_SINGLE)" \
 	--artifact-type application/vnd.acme.rocket.config \
   	artifact.txt:text/plain
 
@@ -15,7 +16,7 @@ push-multiple:
 
 pull:
 	rm -f artifact.txt
-	oras pull "$(REPO)"
+	oras pull "$(REPO_SINGLE)"
 	cat artifact.txt
 
 pull-multiple:

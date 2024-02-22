@@ -33,14 +33,14 @@ jobs:
       uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5.5.1
       with:
         images: |
-          ghcr.io/${{ github.repository }}/hehe
+          ghcr.io/${{ github.repository }}/single
         tags: |
           type=raw,value=lol
 
-    - name: Display ORAS Version
-      run: oras version
-
     - name: Execute Makefile
+      env:
+        REPO_SINGLE: ghcr.io/${{ github.repository }}/single
+        TAGS: ${{ steps.m.outputs.tags[0] }},cat
       run: make push
 
     - name: Execute Makefile
