@@ -32,11 +32,10 @@ jobs:
       id: m
       uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5.5.1
       with:
-        images: |
-          ghcr.io/${{ github.repository }}/single
         sep-tags: ","
         tags: |
           type=raw,value=lol
+          type=raw,value=giraffe
 
     - name: Execute Makefile
       env:
