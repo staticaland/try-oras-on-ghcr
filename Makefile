@@ -1,4 +1,6 @@
+# When running in the workflow, this variable is set automatically by the `docker/metadata-action` action
 DOCKER_METADATA_OUTPUT_TAGS ?= dirty
+
 REPO_SINGLE ?= ghcr.io/staticaland/try-oras-on-ghcr/single
 REPO_MULTIPLE ?= ghcr.io/staticaland/try-oras-on-ghcr/multiple
 

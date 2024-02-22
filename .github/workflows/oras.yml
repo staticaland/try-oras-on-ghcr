@@ -18,8 +18,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
+
     - name: Setup ORAS
       uses: oras-project/setup-oras@ee7dbe1144cb00080a89497f937dae78f85fce29 # v1.1.0
+
 
     - name: Login to GitHub Container Registry (GHCR)
       uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
@@ -28,6 +30,8 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+
+    # The DOCKER_METADATA_OUTPUT_TAGS variable is set automatically by this action
     - name: Extract metadata (tags, labels) from Git reference and GitHub events
       id: m
       uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5.5.1
@@ -40,10 +44,12 @@ jobs:
           type=raw,value=giraffe
           type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
 
+
     - name: Execute Makefile
       env:
         REPO_SINGLE: ghcr.io/${{ github.repository }}/single
       run: make push
+
 
     - name: Execute Makefile
       env:
